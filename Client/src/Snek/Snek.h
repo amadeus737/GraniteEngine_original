@@ -17,6 +17,14 @@ public:
 		_food(_rng, _map, _snake)
 	{ }
 
+	void RestartGame()
+	{
+		_gameOver = false;
+		_gameStarted = true;
+		_snake.Reset({ 2, 2 });
+		_delta = { 1, 0 };
+	}
+
 	void Update() override
 	{
 		UpdateLogic();
@@ -83,6 +91,9 @@ public:
 		else
 		{
 			_window.Clear(Granite::Color::Red());
+
+			if (_window.keyboard.KeyIsPressed(VK_RETURN))
+				RestartGame();
 		}
 	}
 
@@ -92,7 +103,7 @@ private:
 	Snake _snake;
 	Food _food;
 	Coordinates _delta = { 1,0 };
-	static constexpr int _movePeriod = 50; // number of frames needed before move update
+	static constexpr int _movePeriod = 30; // number of frames needed before move update
 	int _moveCounter = 0;
 	bool _gameStarted = false;
 	bool _gameOver = false;

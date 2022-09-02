@@ -47,6 +47,11 @@ private:
 public:
 	Snake(const Coordinates& startLocation)
 	{
+		InitializeSnake(startLocation);
+	}
+
+	void InitializeSnake(const Coordinates& startLocation)
+	{
 		constexpr int nBodyColors = 4;
 		constexpr Granite::Color bodyColors[nBodyColors] =
 		{
@@ -75,6 +80,12 @@ public:
 		Coordinates next(_segments[0].coords());
 		next.Add(delta);
 		return next;
+	}
+
+	void Reset(const Coordinates& spawnLocation)
+	{
+		InitializeSnake(spawnLocation);
+		_nSegments = 1;
 	}
 
 	void Grow()

@@ -1,9 +1,9 @@
 ﻿  Window.cpp
 D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(51,16): warning C4251: 'Granite::WindowProperties::_title': class 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>' needs to have dll-interface to be used by clients of class 'Granite::WindowProperties'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(4920): message : see declaration of 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>'
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(92,16): warning C4251: 'Granite::Window::_args': class 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>' needs to have dll-interface to be used by clients of class 'Granite::Window'
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(95,16): warning C4251: 'Granite::Window::_args': class 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>' needs to have dll-interface to be used by clients of class 'Granite::Window'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(4920): message : see declaration of 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>'
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(100,41): warning C4251: 'Granite::Window::_fpsFrameBeginTime': class 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>' needs to have dll-interface to be used by clients of class 'Granite::Window'
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(103,41): warning C4251: 'Granite::Window::_fpsFrameBeginTime': class 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>' needs to have dll-interface to be used by clients of class 'Granite::Window'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\chrono(687): message : see declaration of 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>'
 D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(172,24): warning C4477: 'swprintf_s' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 1 has type 'WPARAM'
 D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(172,24): message : consider using '%llx' in the format string

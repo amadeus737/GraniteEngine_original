@@ -81,6 +81,9 @@ namespace Granite
 
 		bool IsRunning() { return _isRunning; }
 
+		int ScreenWidth() { return _screenWidth; }
+		int ScreenHeight() { return _screenHeight; }
+
 	private:
 		static LRESULT WINAPI HandleMessageSetup(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 		static LRESULT WINAPI HandleMessageHelper(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);

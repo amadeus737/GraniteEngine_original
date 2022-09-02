@@ -5,6 +5,7 @@
 #include <chrono>
 #include "Core.h"
 #include "Color.h"
+#include "Keyboard.h"
 
 namespace Granite
 {
@@ -83,6 +84,8 @@ namespace Granite
 
 		int ScreenWidth() { return _screenWidth; }
 		int ScreenHeight() { return _screenHeight; }
+
+		Keyboard keyboard;
 
 	private:
 		static LRESULT WINAPI HandleMessageSetup(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);

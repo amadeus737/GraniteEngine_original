@@ -159,7 +159,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\KeyInputTest.h" />
+    <ClInclude Include="src\Common\Block.h" />
+    <ClInclude Include="src\Common\Coordinates.h" />
+    <ClInclude Include="src\Common\Map.h" />
+    <ClInclude Include="src\Snek\Food.h" />
+    <ClInclude Include="src\Snek\Snake.h" />
+    <ClInclude Include="src\Snek\Snek.h" />
+    <ClInclude Include="src\Tests\ColorDemo.h" />
+    <ClInclude Include="src\Tests\MovementDemo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

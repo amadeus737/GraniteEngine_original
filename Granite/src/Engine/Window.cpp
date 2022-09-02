@@ -164,26 +164,28 @@ namespace Granite
 			break;
 
 		case WM_KILLFOCUS:
-			for (int i = 0; i < 256; i++)
-				_keystates[i] = false;
+			keyboard.ClearState();
 			break;
 
 		case WM_KEYDOWN:
 			swprintf_s(out_msg, L"WM_KEYDOWN: 0x%x = %d\n", wp, wp);
 			OutputDebugStringW(out_msg);
-			_keystates[wp] = true;
+			if (!(lp & 0x40000000) || keyboard.AutorepeatIsEnabled()) // no thank you on the autorepeat
+			{
+				keyboard.OnKeyPressed(static_cast<unsigned char>(wp));
+			}
 			break;
 
 		case WM_KEYUP:
 			swprintf_s(out_msg, L"WM_KEYUP: 0x%x\n", wp);
 			OutputDebugStringW(out_msg);
-			_keystates[(unsigned char)wp] = false;
+			keyboard.OnKeyReleased(static_cast<unsigned char>(wp));
 			break;
 
 		case WM_CHAR:
 			swprintf_s(out_msg, L"WM_CHAR: %c\n", (wchar_t)wp);
 			OutputDebugStringW(out_msg);
-	//		kbd.OnChar(static_cast<unsigned char>(wp));
+			keyboard.OnChar(static_cast<unsigned char>(wp));
 			break;
 		}
 

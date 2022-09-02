@@ -1,22 +1,26 @@
 ﻿  Window.cpp
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(51,16): warning C4251: 'Granite::WindowProperties::_title': class 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>' needs to have dll-interface to be used by clients of class 'Granite::WindowProperties'
+D:\Projects\GraniteEngine\Granite\src\Engine\Keyboard.h(93,21): warning C4251: 'Granite::Keyboard::_keybuffer': class 'std::queue<Granite::Keyboard::Event,std::deque<Granite::Keyboard::Event,std::allocator<Granite::Keyboard::Event>>>' needs to have dll-interface to be used by clients of class 'Granite::Keyboard'
+D:\Projects\GraniteEngine\Granite\src\Engine\Keyboard.h(93): message : see declaration of 'std::queue<Granite::Keyboard::Event,std::deque<Granite::Keyboard::Event,std::allocator<Granite::Keyboard::Event>>>'
+D:\Projects\GraniteEngine\Granite\src\Engine\Keyboard.h(94,20): warning C4251: 'Granite::Keyboard::_charbuffer': class 'std::queue<char,std::deque<char,std::allocator<char>>>' needs to have dll-interface to be used by clients of class 'Granite::Keyboard'
+D:\Projects\GraniteEngine\Granite\src\Engine\Keyboard.h(94): message : see declaration of 'std::queue<char,std::deque<char,std::allocator<char>>>'
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(52,16): warning C4251: 'Granite::WindowProperties::_title': class 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>' needs to have dll-interface to be used by clients of class 'Granite::WindowProperties'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(4920): message : see declaration of 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>'
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(95,16): warning C4251: 'Granite::Window::_args': class 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>' needs to have dll-interface to be used by clients of class 'Granite::Window'
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(98,16): warning C4251: 'Granite::Window::_args': class 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>' needs to have dll-interface to be used by clients of class 'Granite::Window'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(4920): message : see declaration of 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>'
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(103,41): warning C4251: 'Granite::Window::_fpsFrameBeginTime': class 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>' needs to have dll-interface to be used by clients of class 'Granite::Window'
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(106,41): warning C4251: 'Granite::Window::_fpsFrameBeginTime': class 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>' needs to have dll-interface to be used by clients of class 'Granite::Window'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\chrono(687): message : see declaration of 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>'
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(172,24): warning C4477: 'swprintf_s' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 1 has type 'WPARAM'
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(172,24): message : consider using '%llx' in the format string
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(172,24): message : consider using '%Ix' in the format string
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(172,24): message : consider using '%I64x' in the format string
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(172,24): warning C4477: 'swprintf_s' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'WPARAM'
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(172,24): message : consider using '%lld' in the format string
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(172,24): message : consider using '%Id' in the format string
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(172,24): message : consider using '%I64d' in the format string
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(178,24): warning C4477: 'swprintf_s' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 1 has type 'WPARAM'
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(178,24): message : consider using '%llx' in the format string
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(178,24): message : consider using '%Ix' in the format string
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(178,24): message : consider using '%I64x' in the format string
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(171,24): warning C4477: 'swprintf_s' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 1 has type 'WPARAM'
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(171,24): message : consider using '%llx' in the format string
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(171,24): message : consider using '%Ix' in the format string
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(171,24): message : consider using '%I64x' in the format string
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(171,24): warning C4477: 'swprintf_s' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'WPARAM'
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(171,24): message : consider using '%lld' in the format string
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(171,24): message : consider using '%Id' in the format string
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(171,24): message : consider using '%I64d' in the format string
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(180,24): warning C4477: 'swprintf_s' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 1 has type 'WPARAM'
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(180,24): message : consider using '%llx' in the format string
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(180,24): message : consider using '%Ix' in the format string
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(180,24): message : consider using '%I64x' in the format string
 D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(154,11): warning C4101: 'result': unreferenced local variable
      Creating library D:\Projects\GraniteEngine\Granite\bin\Debug-x64\Engine\Engine.lib and object D:\Projects\GraniteEngine\Granite\bin\Debug-x64\Engine\Engine.exp
   Granite.vcxproj -> D:\Projects\GraniteEngine\Granite\bin\Debug-x64\Engine\Engine.dll

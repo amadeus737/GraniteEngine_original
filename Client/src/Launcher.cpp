@@ -7,5 +7,5 @@ Granite::Game* Granite::LaunchGame()
 {
 	ASSIGN_WINDOW_PROPERTIES(L"Test Window", 800, 600, 300, 50);
 	//SHOW_FPS(true);
-	GRANITE_RUN_GAME(Snek);
+	GRANITE_RUN_GAME(ColorDemo);
 }

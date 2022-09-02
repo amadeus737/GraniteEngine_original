@@ -4,10 +4,10 @@
 #include <random>
 #include "../Common/Map.h"
 
-class ColorsTest : GraniteGame
+class ColorDemo : GraniteGame
 {
 public:
-	ColorsTest()
+	ColorDemo()
 		:
 		_map(),
 		_rng(std::random_device()())

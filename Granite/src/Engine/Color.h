@@ -24,6 +24,11 @@ namespace Granite
 			return *this;
 		}
 
+		bool IsEqual(const Color& c)
+		{
+			return _colorCode == c._colorCode;
+		}
+
 		unsigned int GetColorCode() { return _colorCode; }
 
 		constexpr unsigned char x() const { return _colorCode >> 24u; }
@@ -38,17 +43,21 @@ namespace Granite
 		void SetG(unsigned char g) { _colorCode = (_colorCode & 0xFFFF00FFu) | (g << 8u); }
 		void SetB(unsigned char b) { _colorCode = (_colorCode & 0xFFFFFF00u) | b; }
 
-		static unsigned int MakeRGB(unsigned char r, unsigned char g, unsigned char b) { return (r << 16) | (g << 8) | b; }
-		static unsigned int White() { return MakeRGB(255u, 255u, 255u); }
-		static unsigned int Black() { return MakeRGB(0u, 0u, 0u); }
-		static unsigned int Gray() { return MakeRGB(0x80u, 0x80u, 0x80u); }
-		static unsigned int LightGray() { return MakeRGB(0xD3u, 0xD3u, 0xD3u); }
-		static unsigned int Red() { return MakeRGB(255u, 0u, 0u); }
-		static unsigned int Green() { return  MakeRGB(0u, 255u, 0u); }
-		static unsigned int Blue() { return  MakeRGB(0u, 0u, 255u); }
-		static unsigned int Yellow() { return  MakeRGB(255u, 255u, 0u); }
-		static unsigned int Cyan() { return MakeRGB(0u, 255u, 255u); }
-		static unsigned int Magenta() { return MakeRGB(255u, 0u, 255u); }
+		//static unsigned int MakeRGB(unsigned char r, unsigned char g, unsigned char b) { return (r << 16) | (g << 8) | b; }
+		static constexpr Color White() { return Color(255u, 255u, 255u); }
+		static constexpr Color Black() { return Color(0u, 0u, 0u); }
+		static constexpr Color MediumGray() { return Color(0x60u, 0x60u, 0x60u); }
+		static constexpr Color Gray() { return Color(0x80u, 0x80u, 0x80u); }
+		static constexpr Color LightGray() { return Color(0xD3u, 0xD3u, 0xD3u); }
+		static constexpr Color Red() { return Color(255u, 0u, 0u); }
+		static constexpr Color Green() { return  Color(0u, 255u, 0u); }
+		static constexpr Color Blue() { return  Color(0u, 0u, 255u); }
+		static constexpr Color Yellow() { return  Color(255u, 255u, 0u); }
+		static constexpr Color Orange() { return Color(255u, 165u, 0u); }
+		static constexpr Color Cyan() { return Color(0u, 255u, 255u); }
+		static constexpr Color Magenta() { return Color(255u, 0u, 255u); }
+		static constexpr Color Purple() { return Color(180u, 0u, 180u); }
+		static constexpr Color Granite() { return Color(0x33u, 0x33u, 0x33u); }
 
 	private:
 		unsigned int _colorCode;

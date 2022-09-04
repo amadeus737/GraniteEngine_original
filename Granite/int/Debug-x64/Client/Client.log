@@ -11,4 +11,13 @@ D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(98,16): warning C4251: 'Gr
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(4920): message : see declaration of 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>'
 D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(106,41): warning C4251: 'Granite::Window::_fpsFrameBeginTime': class 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>' needs to have dll-interface to be used by clients of class 'Granite::Window'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\chrono(687): message : see declaration of 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>'
+D:\Projects\GraniteEngine\Granite\src\GraniteEngine.h(17,21): warning C4129: 'P': unrecognized character escape sequence
+D:\Projects\GraniteEngine\Granite\src\GraniteEngine.h(17,21): warning C4129: 'G': unrecognized character escape sequence
+D:\Projects\GraniteEngine\Granite\src\GraniteEngine.h(17,21): warning C4129: 'D': unrecognized character escape sequence
+D:\Projects\GraniteEngine\Granite\src\GraniteEngine.h(17,21): warning C4129: 'E': unrecognized character escape sequence
+D:\Projects\GraniteEngine\Granite\src\GraniteEngine.h(18,21): warning C4129: 'P': unrecognized character escape sequence
+D:\Projects\GraniteEngine\Granite\src\GraniteEngine.h(18,21): warning C4129: 'G': unrecognized character escape sequence
+D:\Projects\GraniteEngine\Granite\src\GraniteEngine.h(18,21): warning C4129: 'D': unrecognized character escape sequence
+D:\Projects\GraniteEngine\Granite\src\GraniteEngine.h(18,21): warning C4129: 'C': unrecognized character escape sequence
+D:\Projects\GraniteEngine\Granite\src\GraniteEngine.h(18,21): warning C4129: 'E': unrecognized character escape sequence
   Client.vcxproj -> D:\Projects\GraniteEngine\Granite\bin\Debug-x64\Client\Client.exe

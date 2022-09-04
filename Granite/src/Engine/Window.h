@@ -71,6 +71,7 @@ namespace Granite
 		void Clear(Color c);
 		void DrawPixel(int x, int y, Color c);
 		void DrawRect(int x, int y, int width, int height, Color c);
+		void DrawRectBorder(int x, int y, int width, int height, int thickness, Color c);
 
 		void BeginFrame();
 		void RenderFrame();

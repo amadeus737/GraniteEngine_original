@@ -44,5 +44,11 @@
     <ClInclude Include="src\Snek\Snek.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Tetris\Tetris.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tetris\Shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

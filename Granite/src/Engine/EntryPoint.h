@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include "Window.h"
 #include "Game.h"
+#include "FrameTimer.h"
 
 // An external function called CreateGame will generate the pointer to the application
 extern Granite::Game* Granite::LaunchGame();
@@ -15,12 +16,23 @@ extern Granite::Game* Granite::LaunchGame();
 Granite::Game* _game; // Need game pointer globally available
 Granite::WindowProperties _windowProperties;
 Granite::Window _window;
+
+// FPS and frame-timing options
+int _framesBeforeFPSupdate = 200;
 bool _showFPS = false;
+float _FPS = 0.0f;
+float _deltaTime = 0.0f;
+float _time = 0.0f;
 
 // Windows entry point...not actually used as entry point to project because the project is configured as
 // a console project. Instead, the main() function below is the entry point, which calls this entry point.
 int WINAPI wWinMain(HINSTANCE instance, HINSTANCE prevInstance, PWSTR cmdLine, int cmdShow)
 {
+	// Setup a frame timer
+	Granite::FrameTimer frameTimer;
+	int _fpsFrameCount = 0.0f;
+	float _fpsTimeCount = 0.0f;
+
 	// First, get a pointer to the game
 	_game = Granite::LaunchGame();
 
@@ -34,11 +46,30 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE prevInstance, PWSTR cmdLine, i
 	{
 		_window.BeginFrame();
 		_window.ProcessMessage();
+		_deltaTime = frameTimer.Mark();
+		_time += _deltaTime;
+
+		if (_fpsFrameCount < _framesBeforeFPSupdate)
+		{
+			_fpsTimeCount += _deltaTime;
+			_fpsFrameCount++;
+		}
+		else
+		{
+			_FPS = _fpsFrameCount / _fpsTimeCount;
+
+			_fpsFrameCount = 0;
+			_fpsTimeCount = 0;
+
+			if (_showFPS)
+			{
+				system("CLS");
+				printf("FPS = %f\n", _FPS);
+			}
+		}
 		_game->Update();
 		_window.RenderFrame();
 		_window.EndFrame();
-
-		if (_showFPS) printf("FPS = %f\n", _window.GetFPS());
 	}
 
 	return 0;

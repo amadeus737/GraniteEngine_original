@@ -1,4 +1,5 @@
-﻿  Window.cpp
+﻿  Color.cpp
+  Window.cpp
 D:\Projects\GraniteEngine\Granite\src\Engine\Keyboard.h(93,21): warning C4251: 'Granite::Keyboard::_keybuffer': class 'std::queue<Granite::Keyboard::Event,std::deque<Granite::Keyboard::Event,std::allocator<Granite::Keyboard::Event>>>' needs to have dll-interface to be used by clients of class 'Granite::Keyboard'
 D:\Projects\GraniteEngine\Granite\src\Engine\Keyboard.h(93): message : see declaration of 'std::queue<Granite::Keyboard::Event,std::deque<Granite::Keyboard::Event,std::allocator<Granite::Keyboard::Event>>>'
 D:\Projects\GraniteEngine\Granite\src\Engine\Keyboard.h(94,20): warning C4251: 'Granite::Keyboard::_charbuffer': class 'std::queue<char,std::deque<char,std::allocator<char>>>' needs to have dll-interface to be used by clients of class 'Granite::Keyboard'
@@ -22,5 +23,6 @@ D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(180,24): message : consi
 D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(180,24): message : consider using '%Ix' in the format string
 D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(180,24): message : consider using '%I64x' in the format string
 D:\Projects\GraniteEngine\Granite\src\Engine\Window.cpp(154,11): warning C4101: 'result': unreferenced local variable
+  Generating Code...
      Creating library D:\Projects\GraniteEngine\Granite\bin\Debug-x64\Engine\Engine.lib and object D:\Projects\GraniteEngine\Granite\bin\Debug-x64\Engine\Engine.exp
   Granite.vcxproj -> D:\Projects\GraniteEngine\Granite\bin\Debug-x64\Engine\Engine.dll

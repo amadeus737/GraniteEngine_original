@@ -65,7 +65,7 @@ public:
 
 	void UpdateGraphics()
 	{
-		_window.Clear(Granite::Color::MakeRGB(0x33, 0x33, 0x33));
+		_window.Clear(Granite::Color(0x33, 0x33, 0x33));
 		_window.DrawRect(_block.x(), _block.y(), _block.width(), _block.height(), _block.color());
 	}
 

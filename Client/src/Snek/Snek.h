@@ -17,10 +17,21 @@ public:
 		_food(_rng, _map, _snake)
 	{ }
 
+	void Start()
+	{
+		_map.SetWidth(25);
+		_map.SetHeight(25);
+		_map.SetOffset_x(70);
+		_map.SetOffset_y(50);
+
+		_map.SetBorderProperties(4, 2);
+		_map.SetCellProperties(20, 1);
+	}
+
 	void RestartGame()
 	{
 		_gameOver = false;
-		_gameStarted = true;
+		_gameOverDrawCounts = 0;
 		_snake.Reset({ 2, 2 });
 		_delta = { 1, 0 };
 	}
@@ -33,23 +44,17 @@ public:
 
 	void UpdateLogic()
 	{
-		if (!_gameStarted)
-		{
-			_gameStarted = _window.keyboard.KeyIsPressed(VK_RETURN);
-		}
-
-		if (_gameStarted && !_gameOver)
+		if (!_gameOver)
 		{
 			if (_window.keyboard.KeyIsPressed(VK_UP) || _window.keyboard.KeyIsPressed('W')) _delta = { 0, -1 };
 			if (_window.keyboard.KeyIsPressed(VK_LEFT) || _window.keyboard.KeyIsPressed('A')) _delta = { -1, 0 };
 			if (_window.keyboard.KeyIsPressed(VK_DOWN) || _window.keyboard.KeyIsPressed('S')) _delta = { 0, 1 };
 			if (_window.keyboard.KeyIsPressed(VK_RIGHT) || _window.keyboard.KeyIsPressed('D')) _delta = { 1, 0 };
 
-			++_moveCounter;
-
+			_moveCounter += _deltaTime;
 			if (_moveCounter >= _movePeriod)
 			{
-				_moveCounter = 0;
+				_moveCounter -= _movePeriod;
 				const Coordinates next = _snake.GetNextHeadLocation(_delta);
 				_gameOver = !_map.InMap(next) || _snake.InTileExcludeEnd(next);
 
@@ -76,21 +81,17 @@ public:
 	{
 		if (!_gameOver)
 		{
-			if (_gameStarted)
-			{
-				_window.Clear(Granite::Color(0x33, 0x33, 0x33));
-				_snake.Draw(_map);
-				_food.Draw(_map);
-				_map.DrawBorder();
-			}
-			else
-			{
-				_window.Clear(Granite::Color(0, 255, 0));
-			}
+			_window.Clear(Granite::Color(0x33, 0x33, 0x33));
+			_snake.Draw(_map);
+			_food.Draw(_map);
+			_map.DrawBorder();
 		}
 		else
 		{
-			_window.Clear(Granite::Color::Red());
+			if (_gameOverDrawCounts == 0)
+				_window.Clear(Granite::Color::Red());
+
+			_gameOverDrawCounts++;
 
 			if (_window.keyboard.KeyIsPressed(VK_RETURN))
 				RestartGame();
@@ -103,8 +104,9 @@ private:
 	Snake _snake;
 	Food _food;
 	Coordinates _delta = { 1,0 };
-	static constexpr int _movePeriod = 30; // number of frames needed before move update
-	int _moveCounter = 0;
+	static constexpr float _movePeriod = 0.2f; // number of frames needed before move update
+	float _moveCounter = 0.0f;
 	bool _gameStarted = false;
 	bool _gameOver = false;
+	int _gameOverDrawCounts = 0;
 };

@@ -61,7 +61,7 @@ namespace Granite
 
 	public:
 		Keyboard() = default;
-		Keyboard(const Keyboard&) = delete;
+		//Keyboard(const Keyboard&) = delete;
 		//	Keyboard& operator=(const Keyboard&) = delete;
 
 		bool KeyIsPressed(unsigned char keycode) const;

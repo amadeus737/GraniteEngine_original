@@ -1,12 +1,9 @@
 #pragma once
 
-#ifdef GRANITE_PLATFORM_WINDOWS
-
+#include <GraniteEngine.h>
 #include <Windows.h>
 #include <string>
 #include <stdio.h>
-#include "Window.h"
-#include "Game.h"
 #include "FrameTimer.h"
 
 // An external function called CreateGame will generate the pointer to the application
@@ -35,9 +32,7 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE prevInstance, PWSTR cmdLine, i
 
 	// First, get a pointer to the game
 	_game = Granite::LaunchGame();
-
-	// Create the game window, copying over the render window settings
-	_window = Granite::Window(instance, _windowProperties.title(), _windowProperties.width(), _windowProperties.height(), _windowProperties.left(), _windowProperties.top(), cmdLine);
+	_window = Granite::Window(GetModuleHandle(NULL), _windowProperties.title(), _windowProperties.width(), _windowProperties.height(), _windowProperties.left(), _windowProperties.top(), GetCommandLineW());
 
 	// Run the game Start() function
 	_game->Start();
@@ -80,5 +75,3 @@ int main()
 {
 	return wWinMain(GetModuleHandle(NULL), NULL, GetCommandLineW(), SW_SHOWNORMAL);
 }
-
-#endif

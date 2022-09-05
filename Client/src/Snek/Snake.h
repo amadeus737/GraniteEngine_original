@@ -1,8 +1,8 @@
 #pragma once
 
 #include <GraniteEngine.h>
-#include "../Common/Map.h"
 #include <assert.h>
+#include "../Common/Map.h"
 
 class Snake
 {

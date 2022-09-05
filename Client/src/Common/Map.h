@@ -36,11 +36,11 @@ public:
 		const int offset_x = _xoffset + _borderWidth + _borderPadding;
 		const int offset_y = _yoffset + _borderWidth + _borderPadding;
 
-		_window.DrawRect(coords.x * _cellsize + offset_x + _cellPadding, 
-			             coords.y * _cellsize + offset_y + _cellPadding, 
-			             _cellsize - 2 * _cellPadding, 
-			             _cellsize - 2 * _cellPadding, 
-			             c);
+		_window.DrawRect(coords.x * _cellsize + offset_x + _cellPadding,
+			coords.y * _cellsize + offset_y + _cellPadding,
+			_cellsize - 2 * _cellPadding,
+			_cellsize - 2 * _cellPadding,
+			c);
 	}
 
 	void DrawCellBorder(const Coordinates& coords, int thickness, Granite::Color c) const
@@ -54,32 +54,32 @@ public:
 		const int offset_y = _yoffset + _borderWidth + _borderPadding;
 
 		// Draw left edge of tile
-		_window.DrawRect(coords.x * _cellsize + offset_x + _cellPadding, 
-			             coords.y * _cellsize + offset_y + _cellPadding, 
-			             thickness, 
-			             _cellsize, 
-			             c);
+		_window.DrawRect(coords.x * _cellsize + offset_x + _cellPadding,
+			coords.y * _cellsize + offset_y + _cellPadding,
+			thickness,
+			_cellsize,
+			c);
 
 		// Draw top edge of tile
-		_window.DrawRect(coords.x * _cellsize + offset_x + _cellPadding, 
-			             coords.y * _cellsize + offset_y + _cellPadding,
-			             _cellsize, 
-						 thickness,
-			             c);
+		_window.DrawRect(coords.x * _cellsize + offset_x + _cellPadding,
+			coords.y * _cellsize + offset_y + _cellPadding,
+			_cellsize,
+			thickness,
+			c);
 
 		// Draw right edge of tile
-		_window.DrawRect(coords.x * _cellsize + offset_x + _cellPadding + _cellsize, 
-			             coords.y * _cellsize + offset_y + _cellPadding, 
-						 thickness,
-			             _cellsize, 
-			             c);
+		_window.DrawRect(coords.x * _cellsize + offset_x + _cellPadding + _cellsize,
+			coords.y * _cellsize + offset_y + _cellPadding,
+			thickness,
+			_cellsize,
+			c);
 
 		// Draw top edge of tile
-		_window.DrawRect(coords.x * _cellsize + offset_x + _cellPadding, 
-			             coords.y * _cellsize + offset_y + _cellPadding + _cellsize, 
-			             _cellsize + thickness,
-						 thickness,
-			             c);
+		_window.DrawRect(coords.x * _cellsize + offset_x + _cellPadding,
+			coords.y * _cellsize + offset_y + _cellPadding + _cellsize,
+			_cellsize + thickness,
+			thickness,
+			c);
 	}
 
 	void DrawBorder()

@@ -9,15 +9,21 @@ D:\Projects\GraniteEngine\Granite\src\Engine\Keyboard.h(94,20): warning C4251: '
 D:\Projects\GraniteEngine\Granite\src\Engine\Keyboard.h(94): message : see declaration of 'std::queue<char,std::deque<char,std::allocator<char>>>'
 D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(52,16): warning C4251: 'Granite::WindowProperties::_title': class 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>' needs to have dll-interface to be used by clients of class 'Granite::WindowProperties'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(4920): message : see declaration of 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>'
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(99,16): warning C4251: 'Granite::Window::_args': class 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>' needs to have dll-interface to be used by clients of class 'Granite::Window'
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(100,16): warning C4251: 'Granite::Window::_args': class 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>' needs to have dll-interface to be used by clients of class 'Granite::Window'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xstring(4920): message : see declaration of 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>'
-D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(107,41): warning C4251: 'Granite::Window::_fpsFrameBeginTime': class 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>' needs to have dll-interface to be used by clients of class 'Granite::Window'
+D:\Projects\GraniteEngine\Granite\src\Engine\Window.h(108,41): warning C4251: 'Granite::Window::_fpsFrameBeginTime': class 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>' needs to have dll-interface to be used by clients of class 'Granite::Window'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\chrono(687): message : see declaration of 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>'
 D:\Projects\GraniteEngine\Granite\src\Engine\FrameTimer.h(27,41): warning C4251: 'Granite::FrameTimer::last': class 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>' needs to have dll-interface to be used by clients of class 'Granite::FrameTimer'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\chrono(687): message : see declaration of 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>'
-D:\Projects\GraniteEngine\Granite\src\Engine\EntryPoint.h(33,21): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Projects\GraniteEngine\Granite\src\Engine\EntryPoint.h(30,21): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 D:\Projects\GraniteEngine\Client\src\Tetris\Tetris.h(81,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 D:\Projects\GraniteEngine\Client\src\Tetris\Tetris.h(133,25): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 D:\Projects\GraniteEngine\Client\src\Tetris\Tetris.h(438,51): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
 D:\Projects\GraniteEngine\Client\src\Tetris\Tetris.h(438,45): warning C4244: 'argument': conversion from 'float' to 'unsigned char', possible loss of data
+D:\Projects\GraniteEngine\Client\src\3D_Renderer\RotatingWireframeCube.h(138,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Projects\GraniteEngine\Client\src\3D_Renderer\RotatingWireframeCube.h(138,27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Projects\GraniteEngine\Client\src\3D_Renderer\RotatingWireframeCube.h(137,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Projects\GraniteEngine\Client\src\3D_Renderer\RotatingWireframeCube.h(137,27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Projects\GraniteEngine\Client\src\3D_Renderer\RotatingWireframeCube.h(136,73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Projects\GraniteEngine\Client\src\3D_Renderer\RotatingWireframeCube.h(136,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Client.vcxproj -> D:\Projects\GraniteEngine\Granite\bin\Debug-x64\Client.exe

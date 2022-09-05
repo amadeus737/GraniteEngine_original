@@ -17,7 +17,7 @@ public:
 		_shapePosition(), 
 		_ghostShapePosition(), 
 		_cellContents(_map.width()* _map.height(), Granite::Color::Black()), 
-		_shouldDeleteRow(_map.height(), false) 
+		_shouldDeleteRow(_map.height(), false)
 	{ }
 
 	#pragma region FLOW CONTROL
@@ -73,8 +73,8 @@ public:
 	void SpawnNewShape()
 	{
 		// Pick a random shape and spawn it at the top of the screen
-		_currentShape.Spawn_Random(_rng);
-		//_currentShape.Spawn_I(0);
+		//_currentShape.Spawn_Random(_rng);
+		_currentShape.Spawn_I(0);
 		_shapePosition = { 6, 1 };
 		_ghostShapePosition = { 6, 1 };
 		_dropWait = _defaultDropWait;

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Common/Block.h"
+#include "../Common/Block.h"
 
 class MovementDemo : GraniteGame
 {
